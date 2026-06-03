@@ -40,8 +40,10 @@ nav{
   transition:padding .3s,box-shadow .3s;
 }
 nav.scrolled{padding:10px 5%;box-shadow:0 4px 32px rgba(0,0,0,0.28);background:linear-gradient(135deg,#0b5e26,#107030);}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;font-weight:700;
-  background:linear-gradient(135deg,#c8ffd4,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.5px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;font-weight:700;
+  background:linear-gradient(135deg,#c8ffd4,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.5px;text-decoration:none;}
+.nav-logo-img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.35);box-shadow:0 2px 12px rgba(0,0,0,0.18);flex-shrink:0;}
+.nav-logo-text{display:flex;flex-direction:column;}
 .nav-logo span{font-size:.7rem;font-style:normal;font-weight:300;display:block;color:rgba(255,255,255,0.65);letter-spacing:2px;-webkit-text-fill-color:rgba(255,255,255,0.65);}
 .nav-links{display:flex;gap:36px;list-style:none;}
 .nav-links a{text-decoration:none;color:rgba(255,255,255,0.9);font-size:.85rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;position:relative;transition:color .3s;}
@@ -266,6 +268,19 @@ section{padding:80px 5%;}
 .soc-wa{background:rgba(37,211,102,0.1);color:#25d366;}
 .soc-wa:hover{background:rgba(37,211,102,0.22);}
 
+/* TRANSLATE BUTTONS */
+.lang-btns{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
+.lang-btn{display:flex;align-items:center;gap:5px;padding:5px 12px;border-radius:99px;font-size:.7rem;font-weight:600;letter-spacing:.5px;cursor:pointer;border:1.5px solid;transition:all .22s;background:transparent;}
+.lang-btn.en{border-color:rgba(19,150,61,0.3);color:#13963d;}
+.lang-btn.en:hover,.lang-btn.en.active{background:rgba(19,150,61,0.12);border-color:var(--g3);}
+.lang-btn.te{border-color:rgba(255,160,0,0.35);color:#c47d00;}
+.lang-btn.te:hover,.lang-btn.te.active{background:rgba(255,160,0,0.1);border-color:#e8a500;}
+.lang-btn.hi{border-color:rgba(255,80,0,0.3);color:#c04800;}
+.lang-btn.hi:hover,.lang-btn.hi.active{background:rgba(255,80,0,0.08);border-color:#e05000;}
+.lang-btn.active{font-weight:700;}
+.ing-name,.ing-sub,.ing-desc{transition:opacity .25s ease;}
+.ing-translating .ing-name,.ing-translating .ing-sub,.ing-translating .ing-desc{opacity:.4;}
+
 /* FOOTER */
 footer{background:linear-gradient(180deg,#062012 0%,#030e08 100%);padding:50px 5% 24px;border-top:1px solid rgba(255,255,255,0.05);}
 .footer-main{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
@@ -430,7 +445,10 @@ footer{background:linear-gradient(180deg,#062012 0%,#030e08 100%);padding:50px 5
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <div class="nav-logo">Green Zera Inherents<span>DIGESTIVE PACK</span></div>
+  <div class="nav-logo">
+    <img src="images/logioo.jpeg" alt="Green Zera Logo" class="nav-logo-img" onerror="this.style.display='none'"/>
+    <div class="nav-logo-text">Green Zera Inherents<span>DIGESTIVE PACK</span></div>
+  </div>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -540,58 +558,88 @@ footer{background:linear-gradient(180deg,#062012 0%,#030e08 100%);padding:50px 5
     <p class="s-sub">Each ingredient is carefully selected for its proven digestive and wellness benefits, sourced from nature's finest.</p>
   </div>
   <div class="ing-grid">
-    <div class="ing-card reveal">
+    <div class="ing-card reveal" id="ing-laung">
       <div class="ing-img-wrap"><img src="images/laung.png" alt="Laung – Clove"/></div>
       <div class="ing-body">
         <div class="ing-name">Laung</div>
         <div class="ing-sub">Clove · Syzygium aromaticum</div>
         <p class="ing-desc">A powerful spice with natural antibacterial and carminative properties. Laung helps eliminate gas, reduces bloating and supports healthy enzyme production for efficient digestion.</p>
         <div class="ing-tags"><span class="itag">Anti-bloat</span><span class="itag">Enzyme boost</span><span class="itag">Antibacterial</span></div>
+        <div class="lang-btns">
+          <button class="lang-btn en active" onclick="translateIng('laung','en',this)">🇬🇧 English</button>
+          <button class="lang-btn te" onclick="translateIng('laung','te',this)">🇮🇳 తెలుగు</button>
+          <button class="lang-btn hi" onclick="translateIng('laung','hi',this)">🇮🇳 हिंदी</button>
+        </div>
       </div>
     </div>
-    <div class="ing-card reveal">
+    <div class="ing-card reveal" id="ing-saunf">
       <div class="ing-img-wrap"><img src="images/saunf.png" alt="Saunf – Fennel"/></div>
       <div class="ing-body">
         <div class="ing-name">Saunf</div>
         <div class="ing-sub">Fennel Seeds · Foeniculum vulgare</div>
         <p class="ing-desc">Known as nature's digestive candy, Saunf relaxes intestinal muscles, reduces post-meal gas and provides a refreshing cooling effect. A staple in traditional households.</p>
         <div class="ing-tags"><span class="itag">Cooling relief</span><span class="itag">Anti-gas</span><span class="itag">Gut soother</span></div>
+        <div class="lang-btns">
+          <button class="lang-btn en active" onclick="translateIng('saunf','en',this)">🇬🇧 English</button>
+          <button class="lang-btn te" onclick="translateIng('saunf','te',this)">🇮🇳 తెలుగు</button>
+          <button class="lang-btn hi" onclick="translateIng('saunf','hi',this)">🇮🇳 हिंदी</button>
+        </div>
       </div>
     </div>
-    <div class="ing-card reveal">
+    <div class="ing-card reveal" id="ing-zeera">
       <div class="ing-img-wrap"><img src="images/zeera.png" alt="Zeera – Cumin"/></div>
       <div class="ing-body">
         <div class="ing-name">Zeera</div>
         <div class="ing-sub">Cumin · Cuminum cyminum</div>
         <p class="ing-desc">A digestive powerhouse that stimulates enzymes, improves nutrient absorption and reduces heaviness after heavy meals. Aids in detoxification and supports healthy metabolism.</p>
         <div class="ing-tags"><span class="itag">Nutrient absorption</span><span class="itag">Detox</span><span class="itag">Metabolism</span></div>
+        <div class="lang-btns">
+          <button class="lang-btn en active" onclick="translateIng('zeera','en',this)">🇬🇧 English</button>
+          <button class="lang-btn te" onclick="translateIng('zeera','te',this)">🇮🇳 తెలుగు</button>
+          <button class="lang-btn hi" onclick="translateIng('zeera','hi',this)">🇮🇳 हिंदी</button>
+        </div>
       </div>
     </div>
-    <div class="ing-card reveal">
+    <div class="ing-card reveal" id="ing-ajwain">
       <div class="ing-img-wrap"><img src="images/ajwain.png" alt="Ajwain – Carom Seeds"/></div>
       <div class="ing-body">
         <div class="ing-name">Ajwain</div>
         <div class="ing-sub">Carom Seeds · Trachyspermum ammi</div>
         <p class="ing-desc">A trusted remedy for indigestion. Ajwain contains thymol which stimulates gastric juice release and provides instant relief from acidity and post-meal discomfort.</p>
         <div class="ing-tags"><span class="itag">Acidity relief</span><span class="itag">Instant action</span><span class="itag">Energy boost</span></div>
+        <div class="lang-btns">
+          <button class="lang-btn en active" onclick="translateIng('ajwain','en',this)">🇬🇧 English</button>
+          <button class="lang-btn te" onclick="translateIng('ajwain','te',this)">🇮🇳 తెలుగు</button>
+          <button class="lang-btn hi" onclick="translateIng('ajwain','hi',this)">🇮🇳 हिंदी</button>
+        </div>
       </div>
     </div>
-    <div class="ing-card reveal">
+    <div class="ing-card reveal" id="ing-kalanamak">
       <div class="ing-img-wrap"><img src="images/kala-namak.png" alt="Kala Namak – Black Salt"/></div>
       <div class="ing-body">
         <div class="ing-name">Kala Namak</div>
         <div class="ing-sub">Black Salt · Sodium Chloride</div>
         <p class="ing-desc">A mineral-rich volcanic salt known to stimulate bile production, reduce acidity and improve gut flora balance. Enhances the effectiveness of all other herbal ingredients.</p>
         <div class="ing-tags"><span class="itag">Gut flora</span><span class="itag">Bile boost</span><span class="itag">Mineral rich</span></div>
+        <div class="lang-btns">
+          <button class="lang-btn en active" onclick="translateIng('kalanamak','en',this)">🇬🇧 English</button>
+          <button class="lang-btn te" onclick="translateIng('kalanamak','te',this)">🇮🇳 తెలుగు</button>
+          <button class="lang-btn hi" onclick="translateIng('kalanamak','hi',this)">🇮🇳 हिंदी</button>
+        </div>
       </div>
     </div>
-    <div class="ing-card reveal">
+    <div class="ing-card reveal" id="ing-kalimirchi">
       <div class="ing-img-wrap"><img src="images/kali-mirchi.png" alt="Kali Mirchi – Black Pepper"/></div>
       <div class="ing-body">
         <div class="ing-name">Kali Mirchi</div>
         <div class="ing-sub">Black Pepper · Piper nigrum</div>
         <p class="ing-desc">The king of spices. Contains piperine which dramatically enhances bioavailability of all nutrients. Stimulates digestive secretions and prevents constipation.</p>
         <div class="ing-tags"><span class="itag">Bioavailability</span><span class="itag">Anti-constipation</span><span class="itag">Piperine</span></div>
+        <div class="lang-btns">
+          <button class="lang-btn en active" onclick="translateIng('kalimirchi','en',this)">🇬🇧 English</button>
+          <button class="lang-btn te" onclick="translateIng('kalimirchi','te',this)">🇮🇳 తెలుగు</button>
+          <button class="lang-btn hi" onclick="translateIng('kalimirchi','hi',this)">🇮🇳 हिंदी</button>
+        </div>
       </div>
     </div>
   </div>
@@ -795,6 +843,55 @@ document.querySelectorAll('.stat-row').forEach(el=>statObs.observe(el));
 document.querySelectorAll('.ing-grid .ing-card,.benefits-grid .ben-card').forEach((el,i)=>{
   el.style.transitionDelay=(i%4)*0.08+'s';
 });
+
+const ingTranslations={
+  laung:{
+    en:{name:'Laung',sub:'Clove · Syzygium aromaticum',desc:'A powerful spice with natural antibacterial and carminative properties. Laung helps eliminate gas, reduces bloating and supports healthy enzyme production for efficient digestion.'},
+    te:{name:'లవంగం',sub:'లవంగం · సిజీజియం అరోమాటికం',desc:'సహజ యాంటీబాక్టీరియల్ మరియు గ్యాస్ నివారణ గుణాలు కలిగిన శక్తివంతమైన మసాలా. లవంగం గ్యాస్‌ను తొలగించడం, ఉబ్బరాన్ని తగ్గించడం మరియు సమర్థవంతమైన జీర్ణక్రియ కోసం ఆరోగ్యకరమైన ఎంజైమ్ ఉత్పత్తికి మద్దతు ఇస్తుంది.'},
+    hi:{name:'लौंग',sub:'लौंग · सिज़िजियम एरोमेटिकम',desc:'प्राकृतिक एंटीबैक्टीरियल और गैस-निवारक गुणों वाला एक शक्तिशाली मसाला। लौंग गैस को दूर करने, सूजन कम करने और कुशल पाचन के लिए स्वस्थ एंजाइम उत्पादन में सहायता करता है।'}
+  },
+  saunf:{
+    en:{name:'Saunf',sub:'Fennel Seeds · Foeniculum vulgare',desc:'Known as nature\'s digestive candy, Saunf relaxes intestinal muscles, reduces post-meal gas and provides a refreshing cooling effect. A staple in traditional households.'},
+    te:{name:'సోంపు',sub:'సోంపు విత్తనాలు · ఫీనికులమ్ వల్గారే',desc:'ప్రకృతి యొక్క జీర్ణ మిఠాయిగా పిలువబడే సోంపు, పేగు కండరాలను సడలిస్తుంది, భోజనం తర్వాత వచ్చే గ్యాస్‌ను తగ్గిస్తుంది మరియు చల్లని అనుభూతిని అందిస్తుంది. ఇది సాంప్రదాయ ఇళ్ళలో అవసరమైన వస్తువు.'},
+    hi:{name:'सौंफ',sub:'सौंफ के बीज · फोनीकुलम वल्गेयर',desc:'प्रकृति की पाचक कैंडी के रूप में जानी जाने वाली सौंफ, आंतों की मांसपेशियों को आराम देती है, खाने के बाद की गैस कम करती है और ताजगी भरी ठंडक प्रदान करती है। यह पारंपरिक घरों में एक जरूरी चीज है।'}
+  },
+  zeera:{
+    en:{name:'Zeera',sub:'Cumin · Cuminum cyminum',desc:'A digestive powerhouse that stimulates enzymes, improves nutrient absorption and reduces heaviness after heavy meals. Aids in detoxification and supports healthy metabolism.'},
+    te:{name:'జీలకర్ర',sub:'జీలకర్ర · క్యుమినమ్ సైమినమ్',desc:'జీర్ణక్రియలో శక్తివంతమైన జీలకర్ర ఎంజైమ్‌లను ఉత్తేజపరుస్తుంది, పోషక శోషణను మెరుగుపరుస్తుంది మరియు భారమైన భోజనం తర్వాత బరువుదనాన్ని తగ్గిస్తుంది. విషపదార్థాల తొలగింపులో సహాయపడుతుంది మరియు ఆరోగ్యకరమైన జీవక్రియకు మద్దతు ఇస్తుంది.'},
+    hi:{name:'जीरा',sub:'जीरा · क्यूमिनम सायमिनम',desc:'जीरा एक पाचन शक्तिघर है जो एंजाइमों को उत्तेजित करता है, पोषक तत्वों के अवशोषण में सुधार करता है और भारी भोजन के बाद भारीपन कम करता है। विषहरण में सहायक और स्वस्थ चयापचय को बढ़ावा देता है।'}
+  },
+  ajwain:{
+    en:{name:'Ajwain',sub:'Carom Seeds · Trachyspermum ammi',desc:'A trusted remedy for indigestion. Ajwain contains thymol which stimulates gastric juice release and provides instant relief from acidity and post-meal discomfort.'},
+    te:{name:'వాము',sub:'వాము విత్తనాలు · ట్రాకిస్పెర్మం అమ్మి',desc:'అజీర్ణానికి నమ్మకమైన మందు. వాముకు థైమాల్ అనే పదార్థం ఉంటుంది, ఇది జఠర రసాల విడుదలను ప్రేరేపిస్తుంది మరియు ఆమ్లత్వం మరియు భోజనం తర్వాత అసౌకర్యం నుండి తక్షణ ఉపశమనం ఇస్తుంది.'},
+    hi:{name:'अजवाइन',sub:'अजवाइन के बीज · ट्रेकिस्पर्मम अम्मी',desc:'अपच के लिए एक विश्वसनीय उपाय। अजवाइन में थाइमोल होता है जो गैस्ट्रिक जूस के स्राव को बढ़ावा देता है और अम्लता तथा खाने के बाद की परेशानी से तुरंत राहत देता है।'}
+  },
+  kalanamak:{
+    en:{name:'Kala Namak',sub:'Black Salt · Sodium Chloride',desc:'A mineral-rich volcanic salt known to stimulate bile production, reduce acidity and improve gut flora balance. Enhances the effectiveness of all other herbal ingredients.'},
+    te:{name:'నల్ల ఉప్పు',sub:'నల్ల ఉప్పు · సోడియమ్ క్లోరైడ్',desc:'పిత్త ఉత్పత్తిని ప్రేరేపించడం, ఆమ్లత్వాన్ని తగ్గించడం మరియు పేగు వృక్షజాలం సమతుల్యతను మెరుగుపరచడానికి పేరుగాంచిన ఖనిజాలతో నిండిన అగ్నిపర్వత ఉప్పు. మిగిలిన అన్ని మూలికా పదార్థాల ప్రభావాన్ని పెంచుతుంది.'},
+    hi:{name:'काला नमक',sub:'काला नमक · सोडियम क्लोराइड',desc:'यह खनिज-समृद्ध ज्वालामुखीय नमक पित्त उत्पादन को बढ़ावा देने, अम्लता कम करने और आंतों के वनस्पति संतुलन में सुधार के लिए जाना जाता है। सभी अन्य हर्बल सामग्रियों की प्रभावशीलता को बढ़ाता है।'}
+  },
+  kalimirchi:{
+    en:{name:'Kali Mirchi',sub:'Black Pepper · Piper nigrum',desc:'The king of spices. Contains piperine which dramatically enhances bioavailability of all nutrients. Stimulates digestive secretions and prevents constipation.'},
+    te:{name:'నల్ల మిరియాలు',sub:'నల్ల మిరియాలు · పైపర్ నిగ్రమ్',desc:'మసాలాల రాజు. పైపెరిన్ అనే పదార్థాన్ని కలిగి ఉంటుంది, ఇది అన్ని పోషకాల జీవ లభ్యతను అద్భుతంగా పెంచుతుంది. జీర్ణ స్రావాలను ఉత్తేజపరుస్తుంది మరియు మలబద్ధకాన్ని నివారిస్తుంది.'},
+    hi:{name:'काली मिर्च',sub:'काली मिर्च · पाइपर नाइग्रम',desc:'मसालों का राजा। इसमें पाइपेरिन होता है जो सभी पोषक तत्वों की जैवउपलब्धता को काफी हद तक बढ़ाता है। पाचन स्रावों को उत्तेजित करता है और कब्ज को रोकता है।'}
+  }
+};
+
+function translateIng(id,lang,clickedBtn){
+  const card=document.getElementById('ing-'+id);
+  if(!card)return;
+  const data=ingTranslations[id][lang];
+  if(!data)return;
+  card.classList.add('ing-translating');
+  card.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  clickedBtn.classList.add('active');
+  setTimeout(()=>{
+    card.querySelector('.ing-name').textContent=data.name;
+    card.querySelector('.ing-sub').textContent=data.sub;
+    card.querySelector('.ing-desc').textContent=data.desc;
+    card.classList.remove('ing-translating');
+  },220);
+}
 
 function openDistPopup(){
   document.getElementById('distPopup').classList.add('active');
