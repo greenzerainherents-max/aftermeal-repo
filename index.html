@@ -24,7 +24,7 @@ body{font-family:'DM Sans',sans-serif;background:#ffffff;color:#1a1a1a;overflow-
 
 /* LOADER */
 #loader{position:fixed;inset:0;z-index:9999;background:#062012;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s ease;}
-#loader .logo-anim{font-family:'Playfair Display',serif;font-size:3rem;font-style:italic;background:linear-gradient(135deg,var(--g4),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:pulse 1.4s ease-in-out infinite;}
+#loader .logo-anim{font-family:'sans',serif;font-size:3rem;font-style:italic;background:linear-gradient(135deg,var(--g4),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:pulse 1.4s ease-in-out infinite;}
 #loader .bar{margin-top:24px;width:180px;height:3px;background:rgba(255,255,255,0.1);border-radius:99px;overflow:hidden;}
 #loader .bar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--g3),var(--accent));animation:fill 1.8s ease forwards;}
 @keyframes fill{to{width:100%;}}
@@ -40,7 +40,7 @@ nav{
   transition:padding .3s,box-shadow .3s;
 }
 nav.scrolled{padding:10px 5%;box-shadow:0 4px 32px rgba(0,0,0,0.28);background:linear-gradient(135deg,#0b5e26,#107030);}
-.nav-logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;font-weight:700;
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'sans',serif;font-size:1.6rem;font-style:italic;font-weight:700;
   background:linear-gradient(135deg,#c8ffd4,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.5px;text-decoration:none;}
 .nav-logo-img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.35);box-shadow:0 2px 12px rgba(0,0,0,0.18);flex-shrink:0;}
 .nav-logo-text{display:flex;flex-direction:column;}
@@ -85,7 +85,7 @@ nav.scrolled{padding:10px 5%;box-shadow:0 4px 32px rgba(0,0,0,0.28);background:l
 .hero-eyebrow span{font-size:.75rem;font-weight:600;color:var(--g3);letter-spacing:1.5px;text-transform:uppercase;}
 .hero-eyebrow .dot{width:6px;height:6px;background:var(--g3);border-radius:50%;animation:blink 1.5s infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.08;font-weight:900;letter-spacing:-1px;margin-bottom:6px;color:#0a2e14;}
+.hero-h1{font-family:'sans',serif;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.08;font-weight:900;letter-spacing:-1px;margin-bottom:6px;color:#0a2e14;}
 .hero-h1 em{font-style:italic;color:var(--accent2);}
 .hero-h1 .green-text{background:linear-gradient(135deg,#0a8c34,#17b348);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .hero-badge{display:inline-block;background:linear-gradient(90deg,var(--g2),var(--g3));border:1px solid rgba(19,150,61,0.4);color:white;font-size:.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:6px;margin-bottom:14px;}
@@ -169,7 +169,7 @@ nav.scrolled{padding:10px 5%;box-shadow:0 4px 32px rgba(0,0,0,0.28);background:l
 /* SECTIONS COMMON – light bg */
 section{padding:80px 5%;}
 .s-label{font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--g3);display:block;margin-bottom:10px;}
-.s-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:16px;color:#0a2e14;}
+.s-title{font-family:'sans',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;margin-bottom:16px;color:#0a2e14;}
 .s-title em{font-style:italic;color:var(--accent2);}
 .s-sub{font-size:.95rem;color:rgba(10,46,20,0.6);max-width:520px;line-height:1.7;}
 .s-head{margin-bottom:52px;}
@@ -205,7 +205,7 @@ section{padding:80px 5%;}
 .ing-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
 .ing-card:hover .ing-img-wrap img{transform:scale(1.07);}
 .ing-body{padding:20px 20px 22px;position:relative;z-index:2;}
-.ing-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px;color:#0a2e14;}
+.ing-name{font-family:'sans',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px;color:#0a2e14;}
 .ing-sub{font-size:.7rem;color:var(--g3);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:12px;}
 .ing-desc{font-size:.8rem;color:rgba(10,46,20,0.55);line-height:1.7;margin-bottom:14px;}
 .ing-tags{display:flex;flex-wrap:wrap;gap:6px;}
@@ -229,7 +229,7 @@ section{padding:80px 5%;}
 .contact-bento{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
 
 .contact-form-box{background:#f8fdf9;border:1px solid rgba(19,150,61,0.14);border-radius:22px;padding:28px 26px;}
-.form-title{font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:20px;color:#0a2e14;}
+.form-title{font-family:'sans',serif;font-size:1.25rem;margin-bottom:20px;color:#0a2e14;}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .fgroup{margin-bottom:14px;position:relative;}
 .fgroup label{display:block;font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(10,46,20,0.45);margin-bottom:6px;}
@@ -284,7 +284,7 @@ section{padding:80px 5%;}
 /* FOOTER */
 footer{background:linear-gradient(180deg,#062012 0%,#030e08 100%);padding:50px 5% 24px;border-top:1px solid rgba(255,255,255,0.05);}
 .footer-main{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
-.footer-brand .logo{font-family:'Playfair Display',serif;font-size:1.8rem;font-style:italic;font-weight:900;background:linear-gradient(135deg,#6ee87a,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;}
+.footer-brand .logo{font-family:'sans',serif;font-size:1.8rem;font-style:italic;font-weight:900;background:linear-gradient(135deg,#6ee87a,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;}
 .footer-brand p{font-size:.8rem;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:18px;}
 .footer-brand .phone{display:inline-flex;align-items:center;gap:8px;background:rgba(39,163,77,0.12);border:1px solid rgba(39,163,77,0.2);padding:9px 16px;border-radius:99px;font-size:.82rem;color:rgba(255,255,255,0.8);text-decoration:none;transition:background .3s;}
 .footer-brand .phone:hover{background:rgba(39,163,77,0.22);}
@@ -338,7 +338,7 @@ footer{background:linear-gradient(180deg,#062012 0%,#030e08 100%);padding:50px 5
   position:relative;
 }
 .popup-header h3{
-  font-family:'Playfair Display',serif;
+  font-family:'sans',serif;
   font-size:1.3rem;color:#ffffff;font-weight:900;
   margin-bottom:4px;
 }
