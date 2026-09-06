@@ -22,7 +22,9 @@
 <meta name="twitter:description" content="100% natural herbal digestive pack made from 6 traditional herbs. Reduces bloating, eases heaviness, supports gut health.">
 <meta name="twitter:image" content="https://greenzerainherents.com/images/product.png">
 
-<link rel="icon" type="image/png" href="images/logo.jpeg">
+<link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+<link rel="shortcut icon" href="images/logo.jpeg" type="image/jpeg">
+<link rel="apple-touch-icon" href="images/logo.jpeg">
 <title>After Meal Digestive Pack – Your Everyday Digestive Partner | GreenZera Inherents</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +34,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   "name": "GreenZera Inherents",
   "url": "https://greenzerainherents.com/",
   "logo": "https://greenzerainherents.com/images/logo.jpeg",
@@ -40,8 +42,10 @@
   "telephone": "+91-7989988244",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "H. NO 3-4-174/7/1/3, HYDERGUDA, ATTAPUR, HYDERGUDA
-HYDERABAD, RAJENDRANAGAR, TELANGANA, INDIA, 500048",
+    "streetAddress": "H. No 3-4-174/7/1/3, Hyderguda, Attapur, Rajendranagar, Pillar No 140",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500048",
     "addressCountry": "IN"
   }
 }
@@ -83,57 +87,6 @@ HYDERABAD, RAJENDRANAGAR, TELANGANA, INDIA, 500048",
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;font-size:16px;}
 body{font-family:'DM Sans',sans-serif;background:#ffffff;color:#1a1a1a;overflow-x:hidden;}
-
-/* ─── SPECTACULAR LOADER ─── */
-#loader{
-  position:fixed;inset:0;z-index:9999;
-  background:#ffffff;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  overflow:hidden;
-  transition:opacity .8s ease, transform .8s ease;
-}
-#loader.hide{opacity:0;transform:scale(1.04);pointer-events:none;}
-.ld-blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;animation:ldBlobFloat 6s ease-in-out infinite;}
-.ld-blob1{width:500px;height:500px;background:rgba(14,122,50,0.09);top:-120px;right:-100px;animation-delay:0s;}
-.ld-blob2{width:380px;height:380px;background:rgba(19,150,61,0.07);bottom:-80px;left:-80px;animation-delay:2s;}
-.ld-blob3{width:260px;height:260px;background:rgba(240,192,64,0.07);top:30%;left:60%;animation-delay:1s;}
-.ld-blob4{width:200px;height:200px;background:rgba(14,122,50,0.06);bottom:20%;right:10%;animation-delay:3s;}
-@keyframes ldBlobFloat{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(20px,-25px) scale(1.08);}}
-.ld-particles{position:absolute;inset:0;pointer-events:none;}
-.ld-p{position:absolute;border-radius:50%;animation:ldParticle linear infinite;}
-@keyframes ldParticle{0%{transform:translateY(110vh) scale(0);opacity:0;}10%{opacity:1;}90%{opacity:.6;}100%{transform:translateY(-10vh) scale(1);opacity:0;}}
-.ld-ring-outer{position:absolute;width:280px;height:280px;border-radius:50%;border:1.5px solid rgba(19,150,61,0.18);animation:ldSpin 8s linear infinite;}
-.ld-ring-outer::before{content:'';position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:#13963d;box-shadow:0 0 14px 5px rgba(19,150,61,0.5);transform:translateX(-50%);}
-.ld-ring-inner{position:absolute;width:220px;height:220px;border-radius:50%;border:1px dashed rgba(240,192,64,0.3);animation:ldSpin 5s linear infinite reverse;}
-.ld-ring-inner::before{content:'';position:absolute;top:-4px;left:50%;width:7px;height:7px;border-radius:50%;background:#f0c040;box-shadow:0 0 10px 3px rgba(240,192,64,0.6);transform:translateX(-50%);}
-@keyframes ldSpin{to{transform:rotate(360deg);}}
-.ld-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;}
-.ld-logo-wrap{position:relative;width:170px;height:170px;display:flex;align-items:center;justify-content:center;animation:ldLogoEntry 1s .1s cubic-bezier(.175,.885,.32,1.4) both;opacity:0;}
-@keyframes ldLogoEntry{0%{opacity:0;transform:scale(.3) rotate(-20deg);}60%{opacity:1;transform:scale(1.1) rotate(4deg);}100%{opacity:1;transform:scale(1) rotate(0deg);}}
-.ld-logo-glow{position:absolute;inset:-24px;border-radius:50%;background:radial-gradient(circle,rgba(19,150,61,0.2) 0%,transparent 70%);animation:ldGlowPulse 2s ease-in-out infinite;}
-@keyframes ldGlowPulse{0%,100%{transform:scale(1);opacity:.6;}50%{transform:scale(1.25);opacity:1;}}
-.ld-logo-img{width:140px;height:140px;object-fit:contain;filter:drop-shadow(0 10px 28px rgba(19,150,61,0.35));animation:ldImgFloat 3s ease-in-out infinite;}
-@keyframes ldImgFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
-.ld-brand{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.1rem);font-weight:900;color:#0a2e14;letter-spacing:2px;text-align:center;opacity:0;transform:translateY(22px);animation:ldTextUp .7s .85s cubic-bezier(.23,1,.32,1) forwards;margin-top:8px;}
-.ld-sub{font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#13963d;opacity:0;transform:translateY(12px);animation:ldTextUp .6s 1.05s ease forwards;margin-top:5px;}
-@keyframes ldTextUp{to{opacity:1;transform:translateY(0);}}
-.ld-divider{width:0;height:1px;background:linear-gradient(90deg,transparent,#13963d,transparent);margin-top:14px;animation:ldLineExpand .7s 1.2s ease forwards;}
-@keyframes ldLineExpand{to{width:160px;}}
-.ld-dots{display:flex;gap:8px;margin-top:18px;opacity:0;animation:ldFadeIn .5s 1.35s ease forwards;}
-@keyframes ldFadeIn{to{opacity:1;}}
-.ld-dot{width:7px;height:7px;border-radius:50%;background:rgba(19,150,61,0.2);}
-.ld-dot:nth-child(1){background:#13963d;animation:ldDotPulse 1.3s ease-in-out infinite;}
-.ld-dot:nth-child(2){animation:ldDotPulse 1.3s .2s ease-in-out infinite;}
-.ld-dot:nth-child(3){animation:ldDotPulse 1.3s .4s ease-in-out infinite;}
-@keyframes ldDotPulse{0%,100%{transform:scale(1);opacity:.3;}50%{transform:scale(1.6);opacity:1;background:#13963d;}}
-.ld-progress-wrap{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);width:min(260px,72vw);opacity:0;animation:ldFadeIn .5s 1.15s ease forwards;}
-.ld-progress-track{width:100%;height:2px;background:rgba(19,150,61,0.1);border-radius:99px;overflow:hidden;position:relative;}
-.ld-progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#0e7a32,#f0c040);border-radius:99px;animation:ldProgress 2s 1.1s ease forwards;position:relative;}
-.ld-progress-fill::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%;background:#f0c040;box-shadow:0 0 8px 2px rgba(240,192,64,0.7);}
-@keyframes ldProgress{to{width:100%;}}
-.ld-progress-label{margin-top:9px;text-align:center;font-size:.63rem;letter-spacing:2px;text-transform:uppercase;color:rgba(10,46,20,0.38);font-family:'DM Sans',sans-serif;}
-.ld-spark{position:absolute;font-size:1rem;animation:ldSparkFloat 2s ease-in-out infinite;opacity:0;}
-@keyframes ldSparkFloat{0%{opacity:0;transform:translateY(0) scale(.5) rotate(0deg);}30%{opacity:.9;}100%{opacity:0;transform:translateY(-65px) scale(1.3) rotate(30deg);}}
 
 /* NAVBAR – green */
 nav{
@@ -419,48 +372,10 @@ footer{background:linear-gradient(180deg,#062012 0%,#030e08 100%);padding:50px 5
   .hero-img-stage{width:280px;height:280px;}
   .popup-body{padding:20px 18px;}
   .popup-header{padding:20px 20px 16px;}
-  .ld-ring-outer{width:220px;height:220px;}
-  .ld-ring-inner{width:170px;height:170px;}
-  .ld-logo-img{width:110px;height:110px;}
-  .ld-logo-wrap{width:130px;height:130px;}
 }
 </style>
 </head>
 <body>
-
-<!-- LOADER -->
-<div id="loader">
-  <div class="ld-blob ld-blob1"></div>
-  <div class="ld-blob ld-blob2"></div>
-  <div class="ld-blob ld-blob3"></div>
-  <div class="ld-blob ld-blob4"></div>
-  <div class="ld-particles" id="ldParticles"></div>
-  <div class="ld-ring-outer"></div>
-  <div class="ld-ring-inner"></div>
-  <div class="ld-spark" style="top:38%;left:24%;animation-delay:.4s;animation-duration:2.3s;">🌿</div>
-  <div class="ld-spark" style="top:55%;right:21%;animation-delay:.9s;animation-duration:1.9s;">✦</div>
-  <div class="ld-spark" style="top:42%;left:70%;animation-delay:.6s;animation-duration:2.5s;">🍃</div>
-  <div class="ld-spark" style="top:67%;left:32%;animation-delay:1.2s;animation-duration:2s;">⚡</div>
-  <div class="ld-spark" style="top:30%;right:35%;animation-delay:.2s;animation-duration:2.7s;">✿</div>
-  <div class="ld-center">
-    <div class="ld-logo-wrap">
-      <div class="ld-logo-glow"></div>
-      <img class="ld-logo-img" src="./images//logo.jpeg" alt="GreenZera Inherents Logo" width="500" height="500" decoding="async"/>
-    </div>
-    <div class="ld-brand">GreenZera Inherents</div>
-    <div class="ld-sub">After Meal Digestive Pack</div>
-    <div class="ld-divider"></div>
-    <div class="ld-dots">
-      <div class="ld-dot"></div>
-      <div class="ld-dot"></div>
-      <div class="ld-dot"></div>
-    </div>
-  </div>
-  <div class="ld-progress-wrap">
-    <div class="ld-progress-track"><div class="ld-progress-fill"></div></div>
-    <div class="ld-progress-label">Loading your wellness experience</div>
-  </div>
-</div>
 
 <!-- DISTRIBUTOR POPUP -->
 <div class="popup-overlay" id="distPopup">
@@ -750,8 +665,7 @@ footer{background:linear-gradient(180deg,#062012 0%,#030e08 100%);padding:50px 5
         <div class="ib-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
         <h5>Email</h5><p>support@greenzera.in</p>
       </div>
-      <div class="ib wide"><div class="ib-icon">📍</div><h5>Office Address</h5><p>H. NO 3-4-174/7/1/3, HYDERGUDA, ATTAPUR, HYDERGUDA
-HYDERABAD, RAJENDRANAGAR, TELANGANA, INDIA, 500048</p></div>
+      <div class="ib wide"><div class="ib-icon">📍</div><h5>Office Address</h5><p>H. No 3-4-174/7/1/3, Hyderguda, Attapur, Hyderguda Hyderabad, Rajendranagar, Telangana, India, 500048</p></div>
       <div class="ib wide">
         <h5>Follow Us</h5>
         <div class="social-grid">
@@ -813,27 +727,6 @@ HYDERABAD, RAJENDRANAGAR, TELANGANA, INDIA, 500048</p></div>
 <button id="stt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-
-// Loader particles
-(function(){
-  var container = document.getElementById('ldParticles');
-  if(!container) return;
-  var colors = ['rgba(19,150,61,0.28)','rgba(14,122,50,0.2)','rgba(240,192,64,0.28)','rgba(19,150,61,0.15)','rgba(255,255,255,0.5)'];
-  for(var i=0;i<24;i++){
-    var p = document.createElement('div');
-    p.className = 'ld-p';
-    var size = Math.random()*7+2;
-    p.style.cssText = 'width:'+size+'px;height:'+size+'px;background:'+colors[Math.floor(Math.random()*colors.length)]+';left:'+Math.random()*100+'%;animation-duration:'+(Math.random()*4+4)+'s;animation-delay:'+(Math.random()*3)+'s;';
-    container.appendChild(p);
-  }
-})();
-
-window.addEventListener('load',function(){
-  setTimeout(function(){
-    var loader = document.getElementById('loader');
-    if(loader){ loader.classList.add('hide'); setTimeout(function(){ loader.remove(); }, 900); }
-  }, 2900);
-});
 
 const nav=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{
